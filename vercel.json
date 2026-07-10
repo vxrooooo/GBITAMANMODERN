@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/adminblast", "destination": "/index.html" },
+    { "source": "/adminblast/", "destination": "/index.html" }
+  ]
+}

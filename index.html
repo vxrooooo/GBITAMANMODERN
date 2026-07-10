@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GBI Family Church Taman Modern — Dashboard Jemaat</title>
+  <meta name="description" content="Dashboard manajemen jemaat & WhatsApp Blast GBI Family Church Taman Modern" />
+
+  <!-- Elegant fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LANDING PAGE  ——  ditampilkan di root (/)
+       Panel admin tersedia di /adminblast
+       ============================================================ -->
+  <div id="landing" class="hidden">
+
+    <!-- NAVBAR -->
+    <nav class="lp-nav" id="lp-nav">
+      <div class="brand">
+        <span class="brand-emblem" data-emblem></span>
+        <span class="wordmark">
+          <span class="row1"><span class="gbi">GBI</span><span class="family">Family Church</span></span>
+          <span class="taman">Taman Modern</span>
+        </span>
+      </div>
+      <div class="lp-nav-links">
+        <a href="#jadwal">Kegiatan Rutin</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="lp-hero" id="lp-hero">
+      <!-- Slideshow background -->
+      <div class="lp-slides" id="lp-slides">
+        <!-- slides injected by initSlideshow() in app.js -->
+        <div class="lp-slide lp-slide-placeholder active"></div>
+      </div>
+      <!-- Gradient overlay for text legibility -->
+      <div class="lp-hero-bg"></div>
+      <div class="lp-hero-grain"></div>
+
+      <!-- Hero text -->
+      <div class="lp-hero-content">
+        <div class="lp-hero-script">Selamat datang di</div>
+        <h1>
+          <span>GBI Family</span>
+          <span>Church</span>
+        </h1>
+        <div class="lp-hero-sub-title">Taman Modern &nbsp;·&nbsp; Jakarta Timur</div>
+        <p class="lp-hero-desc">
+          Melayani dengan sepenuh hati, berkumpul sebagai satu keluarga.<br/>
+          Semua orang disambut dengan kasih di sini.
+        </p>
+        <div class="lp-hero-actions">
+          <a href="#jadwal" class="lp-btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Lihat Kegiatan Rutin
+          </a>
+          <a href="#tentang" class="lp-btn-ghost">Tentang Kami</a>
+        </div>
+      </div>
+
+      <!-- Slide navigation arrows -->
+      <button class="lp-slide-arrow lp-slide-prev" id="lp-slide-prev" aria-label="Sebelumnya">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="15,18 9,12 15,6"/></svg>
+      </button>
+      <button class="lp-slide-arrow lp-slide-next" id="lp-slide-next" aria-label="Berikutnya">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="9,18 15,12 9,6"/></svg>
+      </button>
+
+      <!-- Dot indicators -->
+      <div class="lp-slide-dots" id="lp-slide-dots"></div>
+
+      <div class="lp-scroll-cue">
+        <div class="lp-scroll-line"></div>
+        Scroll
+      </div>
+    </section>
+
+    <!-- JADWAL IBADAH -->
+    <section id="jadwal" class="lp-section">
+      <div class="lp-container">
+        <div class="lp-section-head fade-up">
+          <span class="eyebrow">Program Gereja</span>
+          <h2>Kegiatan Rutin</h2>
+          <p>Bergabunglah bersama kami dalam setiap kegiatan ibadah. Semua orang disambut dengan kasih.</p>
+        </div>
+
+        <div class="schedule-grid">
+
+          <!-- 1. Rumah Doa -->
+          <div class="sched-card fade-up" data-delay="0">
+            <div class="sched-img-wrap">
+              <img src="rumahdoa.png" alt="Rumah Doa" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                <div class="sched-label-bg">Rumah Doa</div>
+              </div>
+              <span class="sched-badge">Selasa</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Rumah Doa</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Selasa · 19.30 WIB
+              </div>
+              <div class="sched-desc">Waktu doa bersama, menyerahkan setiap pergumulan dan syukur ke hadapan Tuhan.</div>
+            </div>
+          </div>
+
+          <!-- 2. WBI -->
+          <div class="sched-card fade-up" data-delay="90">
+            <div class="sched-img-wrap">
+              <img src="WBI.png" alt="WBI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <div class="sched-label-bg">WBI</div>
+              </div>
+              <span class="sched-badge alt">Rabu</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">WBI</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Rabu · 10.00 WIB
+              </div>
+              <div class="sched-desc">Diadakan setiap minggu ke-2 dan ke-4. Pendalaman Firman Tuhan yang lebih intim.</div>
+            </div>
+          </div>
+
+          <!-- 3. Ibadah Cool -->
+          <div class="sched-card fade-up" data-delay="180">
+            <div class="sched-img-wrap">
+              <img src="Cool.png" alt="Ibadah Cool" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div class="sched-label-bg">Ibadah Cool</div>
+              </div>
+              <span class="sched-badge">Jumat</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Ibadah Cool</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Jumat · 19.00 WIB
+              </div>
+              <div class="sched-desc">Ibadah kelompok kecil yang hangat, di masing-masing wilayah Cool.</div>
+            </div>
+          </div>
+
+          <!-- 4. Menara Doa Pagi (Sabtu) -->
+          <div class="sched-card fade-up" data-delay="0">
+            <div class="sched-img-wrap">
+              <img src="menaradoa.png" alt="Menara Doa Pagi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                <div class="sched-label-bg">Menara Doa Pagi</div>
+              </div>
+              <span class="sched-badge">Sabtu</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Menara Doa Pagi</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Sabtu · 06.00 WIB
+              </div>
+              <div class="sched-desc">Setiap Sabtu Minggu ke II–V. Doa pagi bersama di Ruang Sekolah Minggu.</div>
+            </div>
+          </div>
+
+          <!-- 5. Ibadah Raya (Minggu) -->
+          <div class="sched-card fade-up" data-delay="90">
+            <div class="sched-img-wrap">
+              <img src="ibadahraya.png" alt="Ibadah Raya" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                <div class="sched-label-bg">Ibadah Raya</div>
+              </div>
+              <span class="sched-badge alt">Minggu</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Ibadah Raya</div>
+              <div class="sched-schedule-rows">
+                <div class="sched-row">
+                  <span class="sched-row-label">Minggu Pertama</span>
+                  <span class="sched-row-time">09.00 WIB</span>
+                </div>
+                <div class="sched-row-divider"></div>
+                <div class="sched-row">
+                  <span class="sched-row-label">Minggu ke 2–4 · Ibadah 1</span>
+                  <span class="sched-row-time">08.00 WIB</span>
+                </div>
+                <div class="sched-row">
+                  <span class="sched-row-label">Minggu ke 2–4 · Ibadah 2</span>
+                  <span class="sched-row-time">10.00 WIB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Ibadah Teens -->
+          <div class="sched-card fade-up" data-delay="90">
+            <div class="sched-img-wrap">
+              <img src="ibadahteens.png" alt="Ibadah Teens" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <div class="sched-label-bg">Ibadah Teens</div>
+              </div>
+              <span class="sched-badge alt">Minggu</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Ibadah Teens</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Minggu · 08.00 & 10.00 WIB
+              </div>
+              <div class="sched-desc">Ruang Teens Lt. 1. Khusus Minggu pertama gabung bersama Ibadah Raya.</div>
+            </div>
+          </div>
+
+          <!-- 7. Sekolah Minggu -->
+          <div class="sched-card fade-up" data-delay="180">
+            <div class="sched-img-wrap">
+              <img src="sekolahminggu.png" alt="Sekolah Minggu" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <div class="sched-label-bg">Sekolah Minggu</div>
+              </div>
+              <span class="sched-badge">Minggu</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Sekolah Minggu</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Minggu · 08.00 & 10.00 WIB
+              </div>
+              <div class="sched-desc">Ibadah Youth Revival — Sunday School. Ruang SM Lt. 1.</div>
+            </div>
+          </div>
+
+          <!-- 8. Arrow Service -->
+          <div class="sched-card fade-up" data-delay="0">
+            <div class="sched-img-wrap">
+              <img src="arrowservice.png" alt="Arrow Service" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <div class="sched-label-bg">Arrow Service</div>
+              </div>
+              <span class="sched-badge alt">Minggu</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Arrow Service</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                Minggu · 14.00 WIB
+              </div>
+              <div class="sched-desc">Ibadah Youth Revival — Arrow Service. Ruang Teens Lt. 1.</div>
+            </div>
+          </div>
+
+          <!-- 9. Penyerahan Anak -->
+          <div class="sched-card fade-up" data-delay="90">
+            <div class="sched-img-wrap">
+              <img src="penyerahananak.png" alt="Penyerahan Anak" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <div class="sched-label-bg">Penyerahan Anak</div>
+              </div>
+              <span class="sched-badge">Minggu Pertama</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Penyerahan Anak</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Setiap Minggu Pertama
+              </div>
+              <div class="sched-desc">Hubungi counter ibadah raya atau sekretariat gereja untuk pendaftaran.</div>
+            </div>
+          </div>
+
+          <!-- 10. Baptisan Air -->
+          <div class="sched-card fade-up" data-delay="180">
+            <div class="sched-img-wrap">
+              <img src="baptisanair.png" alt="Baptisan Air" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="sched-img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                <div class="sched-label-bg">Baptisan Air</div>
+              </div>
+              <span class="sched-badge alt">Minggu Ketiga</span>
+            </div>
+            <div class="sched-body">
+              <div class="sched-sep"></div>
+              <div class="sched-name">Baptisan Air</div>
+              <div class="sched-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                Setiap Minggu Ketiga
+              </div>
+              <div class="sched-desc">Hubungi counter ibadah raya atau sekretariat gereja untuk pendaftaran.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VERSE BAND -->
+    <div class="lp-verse">
+      <div class="lp-verse-script fade-up">Firman-Nya</div>
+      <blockquote class="fade-up" style="transition-delay:.15s">
+        "Sebab di mana dua atau tiga orang berkumpul dalam Nama-Ku,
+        di situ Aku ada di tengah-tengah mereka."
+        <cite>Matius 18:20</cite>
+      </blockquote>
+    </div>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="lp-about">
+      <div class="lp-about-inner">
+        <div>
+          <div class="lp-about-label">Siapa Kami</div>
+          <span class="lp-about-script">Keluarga yang</span>
+          <h2>Bertumbuh<br/>Bersama</h2>
+          <p>Kami adalah jemaat Gereja Bethel Indonesia yang berlokasi di kawasan Taman Modern, Jakarta Timur. Dengan semangat keluarga, kami percaya bahwa setiap orang berharga di mata Tuhan dan memiliki bagian dalam rencana-Nya yang indah.</p>
+          <p>Bergabunglah bersama kami — entah itu melalui Ibadah Raya, Rumah Doa, WBI, maupun Ibadah Cool di wilayah Anda. Pintu selalu terbuka untuk semua.</p>
+          <div class="lp-about-stat">
+            <div class="lp-about-stat-item">
+              <span class="lp-about-stat-num">10</span>
+              <span class="lp-about-stat-label">Kegiatan</span>
+            </div>
+            <div class="lp-about-stat-item">
+              <span class="lp-about-stat-num">1D</span>
+              <span class="lp-about-stat-label">Rayon</span>
+            </div>
+            <div class="lp-about-stat-item">
+              <span class="lp-about-stat-num">∞</span>
+              <span class="lp-about-stat-label">Kasih Tuhan</span>
+            </div>
+          </div>
+        </div>
+        <div class="lp-about-img-wrap lp-pastor-wrap fade-right">
+          <img src="gembala.png" alt="Gembala GBI Family Church Taman Modern" onerror="this.src='ibadahraya.png';this.onerror=null;"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK & LOKASI -->
+    <section id="kontak" class="lp-contact">
+      <div class="lp-container">
+        <div class="lp-contact-inner">
+
+          <div class="lp-contact-left">
+            <div class="lp-about-label fade-up">Temukan Kami</div>
+            <h2 class="lp-contact-title fade-up" data-delay="80">Lokasi &<br/>Kontak</h2>
+
+            <div class="lp-contact-item fade-up" data-delay="0">
+              <div class="lp-contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="lp-contact-label">Alamat</div>
+                <div class="lp-contact-val">Ruko Taman Modern Blok R.2 No. 8A, Jl. Palem Raya, Ujung Menteng, Kec. Cakung, Kota Jakarta Timur, DKI Jakarta 13960</div>
+                <a class="lp-contact-link" href="https://maps.google.com/?q=Ruko+Taman+Modern+Blok+R.2+No.+8A+Ujung+Menteng+Cakung+Jakarta" target="_blank" rel="noopener">
+                  Buka di Google Maps →
+                </a>
+              </div>
+            </div>
+
+            <div class="lp-contact-item fade-up" data-delay="100">
+              <div class="lp-contact-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <div class="lp-contact-label">WhatsApp</div>
+                <div class="lp-contact-val">Hubungi kami langsung melalui WhatsApp</div>
+                <a class="lp-wa-btn" href="https://wa.me/6281234567890" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                  Chat WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="lp-social fade-up" data-delay="200">
+              <div class="lp-contact-label" style="margin-bottom:14px;">Ikuti Kami</div>
+              <div class="lp-social-row">
+                <!-- Instagram -->
+                <a class="lp-social-btn" href="https://www.instagram.com/gbifamilychurchtamanmodern" target="_blank" rel="noopener" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  <span>Instagram</span>
+                </a>
+                <!-- TikTok -->
+                <a class="lp-social-btn" href="https://www.tiktok.com/@gbifamilychurch" target="_blank" rel="noopener" aria-label="TikTok">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                  <span>TikTok</span>
+                </a>
+                <!-- YouTube -->
+                <a class="lp-social-btn" href="https://www.youtube.com/@gbifamilychurch" target="_blank" rel="noopener" aria-label="YouTube">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  <span>YouTube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="lp-footer">
+      <div class="lp-footer-inner">
+        <div>
+          <div class="brand" style="margin-bottom:18px;">
+            <span class="brand-emblem" data-emblem></span>
+            <span class="wordmark">
+              <span class="row1"><span class="gbi">GBI</span><span class="family">Family Church</span></span>
+              <span class="taman">Taman Modern</span>
+            </span>
+          </div>
+          <div class="lp-footer-info">
+            Melayani dengan kasih,<br/>bertumbuh sebagai keluarga.<br/>
+            Jakarta Timur · Rayon 1D
+          </div>
+          <!-- Social icons in footer -->
+          <div class="lp-footer-social">
+            <a href="https://www.instagram.com/gbifamilychurchtamanmodern" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@gbifamilychurch" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@gbifamilychurch" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="lp-footer-info">
+          <strong>Kegiatan Rutin</strong>
+          Selasa 19.30 — Rumah Doa<br/>
+          Sabtu 06.00 — Menara Doa Pagi (Minggu II–V)<br/>
+          Rabu 10.00 — WBI (Minggu ke-2 & 4)<br/>
+          Jumat 19.00 — Ibadah Cool<br/>
+          Minggu 09.00 — Ibadah Raya (Minggu pertama)<br/>
+          Minggu 08.00 & 10.00 — Ibadah Raya (Minggu 2–4)<br/>
+          Minggu 08.00 & 10.00 — Teens & Sekolah Minggu<br/>
+          Minggu 14.00 — Arrow Service
+        </div>
+      </div>
+      <div class="lp-footer-bottom">
+        <span>© 2025 GBI Family Church Taman Modern. All rights reserved.</span>
+        <span class="lp-footer-addr">
+          Ruko Taman Modern Blok R.2 No. 8A, Jl. Palem Raya, Ujung Menteng, Kec. Cakung, Jakarta Timur 13960
+        </span>
+      </div>
+    </footer>
+
+  </div><!-- #landing -->
+
+  <!-- ===================== SPLASH ===================== -->
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="splash-emblem" data-emblem></div>
+      <div class="splash-word">
+        <div class="a">GBI <em>Family Church</em></div>
+        <div class="b">Taman Modern</div>
+      </div>
+      <div class="splash-tagline">Melayani dengan kasih, bertumbuh sebagai keluarga</div>
+      <div class="splash-bar"><i></i></div>
+    </div>
+  </div>
+
+  <!-- ===================== LOGIN ===================== -->
+  <div id="login" class="hidden">
+    <div class="login-art">
+      <div class="brand brand--light">
+        <span class="brand-emblem" data-emblem></span>
+        <span class="wordmark">
+          <span class="row1"><span class="gbi">GBI</span><span class="family">Family Church</span></span>
+          <span class="taman">Taman Modern</span>
+        </span>
+      </div>
+      <div class="verse">
+        “Sebab di mana dua atau tiga orang berkumpul dalam <span>Nama-Ku</span>, di situ Aku ada di tengah-tengah mereka.”
+        <cite>Matius 18:20</cite>
+      </div>
+      <div style="opacity:.7; font-size:.85rem; position:relative; z-index:2;">© GBI Family Church Taman Modern · Rayon 1D</div>
+    </div>
+
+    <div class="login-form-wrap">
+      <div class="login-card">
+        <h1>Panel Admin</h1>
+        <p class="sub">Masuk untuk mengelola data jemaat dan mengirim WhatsApp Blast.</p>
+
+        <div class="field">
+          <label>Username</label>
+          <div class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <input class="input" id="login-user" type="text" placeholder="masukkan username" autocomplete="username" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <div class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input class="input" id="login-pass" type="password" placeholder="masukkan password" autocomplete="current-password" />
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg" id="login-btn" style="margin-top:8px;">
+          Masuk Dashboard
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="hint">Demo: <b>admin</b> / <b>gbi2026</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== APP ===================== -->
+  <div id="app" class="hidden">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-emblem" data-emblem></span>
+        <span class="wordmark">
+          <span class="row1"><span class="gbi">GBI</span><span class="family">Family Church</span></span>
+          <span class="taman">Taman Modern</span>
+        </span>
+      </div>
+
+      <nav class="nav">
+        <button data-page="dashboard" class="active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          Dashboard
+        </button>
+        <button data-page="members">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Data Jemaat
+        </button>
+      </nav>
+
+      <div class="spacer"></div>
+
+      <div class="tb-actions">
+        <button class="fonte-status off" id="fonte-status" title="Pengaturan koneksi Fonnte">
+          <span class="dot"></span><span id="fonte-status-text">Fonnte: belum terhubung</span>
+        </button>
+        <div class="user-chip">
+          <span class="uname" id="user-name">Admin</span>
+          <span class="uava" id="user-ava">A</span>
+        </div>
+        <button class="btn btn-ghost btn-icon" id="logout-btn" title="Keluar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== PAGE 1: DASHBOARD ===== -->
+      <section id="page-dashboard">
+        <div class="page-head">
+          <div class="eyebrow">Ringkasan Jemaat</div>
+          <h2>Selamat datang kembali 🤍</h2>
+          <p>Pantau pertumbuhan jemaat dan kirim pesan WhatsApp ke kelompok pelayanan dengan mudah.</p>
+        </div>
+
+        <div class="stat-grid" id="stat-grid"></div>
+
+        <div class="dash-grid">
+          <!-- LEFT: blast composer -->
+          <div class="panel" id="blast-panel">
+            <div class="panel-head">
+              <h3>🔔 WhatsApp Blast</h3>
+              <span class="desc">Kirim pesan ke siapa saja, berdasarkan peran pelayanan</span>
+            </div>
+            <div class="panel-body">
+              <!-- step 1: target group -->
+              <div class="seg-label"><span class="step">1</span> Pilih Kelompok Penerima</div>
+              <div class="chip-group">
+                <div class="chips" id="quick-targets"></div>
+              </div>
+
+              <!-- step 2: by role -->
+              <div class="chip-group" style="margin-top:12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:11px; flex-wrap:wrap; gap:10px;">
+                  <div style="font-size:.85rem; font-weight:700; color:var(--ink-2);">Berdasarkan Peran Pelayanan</div>
+                  <div class="match-toggle" id="match-toggle" title="ANY = salah satu peran · ALL = semua peran">
+                    <button data-match="any" class="on">Salah satu</button>
+                    <button data-match="all">Semua peran</button>
+                  </div>
+                </div>
+                <div class="chips" id="role-targets"></div>
+              </div>
+
+              <!-- step 3: individuals -->
+              <div class="seg-label" style="margin-top:18px;"><span class="step">2</span> Tambah / Kurangi Orang Tertentu (opsional)</div>
+              <div class="input-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input class="input" id="person-search" type="text" placeholder="Cari nama jemaat untuk ditambahkan…" />
+              </div>
+              <div id="person-results" class="chips" style="margin-top:9px;"></div>
+
+              <!-- recipients preview -->
+              <div class="recipients-box">
+                <div class="recipients-head">
+                  <span class="cnt" id="recip-count">0 <span>penerima</span></span>
+                  <div class="spacer" style="flex:1;"></div>
+                  <button class="btn btn-sm btn-ghost" id="clear-recip">Bersihkan</button>
+                </div>
+                <div class="recipients-list" id="recipients-list"></div>
+              </div>
+
+              <!-- step 4: message -->
+              <div class="seg-label" style="margin-top:20px;"><span class="step">3</span> Tulis Pesan</div>
+              <div class="template-bar" id="template-bar"></div>
+              <textarea class="input" id="blast-message" placeholder="Tulis pesan di sini… Shalom {nama}, ada pengumuman penting untuk pelayanan minggu ini 🤍"></textarea>
+              <div class="var-hint">
+                <span style="font-size:.78rem; color:var(--ink-3); align-self:center;">Variabel:</span>
+                <span class="var-pill" data-var="{nama}">{nama}</span>
+                <span class="var-pill" data-var="{panggilan}">{panggilan}</span>
+                <span class="var-pill" data-var="{peran}">{peran}</span>
+                <button class="tpl-chip" id="save-tpl" style="margin-left:auto;">+ Simpan sebagai template</button>
+              </div>
+              <div class="char-count"><span id="char-count">0</span> karakter</div>
+
+              <div style="display:flex; gap:12px; align-items:center; margin-top:16px; flex-wrap:wrap;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <label style="font-size:.82rem; font-weight:600; color:var(--ink-2);">Jeda antar pesan</label>
+                  <input class="input" id="blast-delay" type="number" min="0" max="60" value="2" style="width:74px; padding:8px 10px;" />
+                  <span style="font-size:.82rem; color:var(--ink-3);">detik</span>
+                </div>
+                <button class="btn btn-primary btn-lg" id="send-blast" style="margin-left:auto;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                  Kirim Blast
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: charts + birthdays -->
+          <div style="display:flex; flex-direction:column; gap:18px;">
+            <div class="panel">
+              <div class="panel-head"><h3>Komposisi Jemaat</h3></div>
+              <div class="panel-body">
+                <div class="chart-row">
+                  <div class="donut-wrap" id="donut-wrap"></div>
+                  <div class="legend" id="donut-legend"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head"><h3>Pelayan per Bidang</h3></div>
+              <div class="panel-body"><div class="bars" id="role-bars"></div></div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h3>✨ Ulang Tahun Terdekat</h3>
+                <span class="spacer"></span>
+                <button class="btn btn-sm btn-soft" id="bday-blast">Kirim Ucapan</button>
+              </div>
+              <div class="panel-body"><div class="bday-list" id="bday-list"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PAGE 2: MEMBERS ===== -->
+      <section id="page-members" class="hidden">
+        <div class="page-head">
+          <div class="eyebrow">Direktori</div>
+          <h2>Data Jemaat</h2>
+          <p>Kelola seluruh anggota jemaat & pelayan Tuhan. Klik kartu untuk detail dan kartu anggota.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input id="member-search" type="text" placeholder="Cari nama, nomor HP, atau alamat…" />
+          </div>
+          <select class="select" id="filter-type" style="width:auto; min-width:150px;">
+            <option value="">Semua Tipe</option>
+            <option value="jemaat">Jemaat Biasa</option>
+            <option value="pelayan">Pelayan Tuhan</option>
+          </select>
+          <select class="select" id="filter-role" style="width:auto; min-width:160px;"></select>
+          <button class="btn btn-ghost" id="import-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Import Excel
+          </button>
+          <button class="btn btn-ghost" id="export-btn" title="Ekspor data ke Excel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5-5 5 5M12 5v12" transform="rotate(180 12 12)"/></svg>
+            Ekspor
+          </button>
+          <button class="btn btn-primary" id="add-member-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            Tambah Jemaat
+          </button>
+        </div>
+
+        <div class="members-meta">
+          Menampilkan <b id="member-shown">0</b> dari <b id="member-total">0</b> anggota
+          <span class="spacer" style="flex:1;"></span>
+        </div>
+
+        <div class="member-grid" id="member-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===================== MODAL HOST ===================== -->
+  <div id="modal-host"></div>
+  <div id="toast-wrap"></div>
+
+  <!-- Emblem template (reused) -->
+  <template id="emblem-svg">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 3v6" stroke="#D9550A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M9 5h6" stroke="#D9550A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M5 13c0 4 3 6 7 6s7-2 7-6H5z" fill="#F26B1F"/>
+      <path d="M5 13c2-1 12-1 14 0" stroke="#fff" stroke-width="1.2" opacity=".7"/>
+    </svg>
+  </template>
+
+  <!-- Supabase (used in production; app falls back to demo data if not configured) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- SheetJS for Excel import/export (lazy-friendly) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
