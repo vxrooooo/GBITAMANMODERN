@@ -207,8 +207,27 @@ function fillEmblems() {
   $$('[data-emblem]').forEach(el => { if (!el.children.length) el.appendChild(tpl.cloneNode(true)); });
 }
 
+function initBrandLogos(scope) {
+  const root = scope || document;
+  const targets = [...root.querySelectorAll('.brand-emblem[data-emblem], .splash-emblem[data-emblem]')];
+  if (!targets.length) return;
+
+  const probe = new Image();
+  probe.onload = () => {
+    targets.forEach(el => {
+      const img = document.createElement('img');
+      img.src = 'logo.png';
+      img.alt = 'GBI Family Church Taman Modern';
+      img.className = el.classList.contains('splash-emblem') ? 'splash-logo-img' : 'brand-logo-img';
+      el.replaceWith(img);
+    });
+  };
+  probe.onerror = () => fillEmblems();
+  probe.src = 'logo.png';
+}
+
 function startSplash() {
-  fillEmblems();
+  initBrandLogos();
   setTimeout(() => {
     $('#splash').classList.add('out');
     setTimeout(() => { $('#splash').remove(); $('#login').classList.remove('hidden'); $('#login-user').focus(); }, 700);

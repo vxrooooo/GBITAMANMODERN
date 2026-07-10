@@ -96,6 +96,17 @@ body {
 }
 .brand-emblem svg { width: 60%; height: 60%; }
 
+.brand-logo-img {
+  width: 46px; height: 46px; flex: 0 0 auto;
+  object-fit: contain; display: block;
+}
+.splash-logo-img {
+  width: 96px; height: 96px; margin: 0 auto 26px;
+  object-fit: contain; display: block;
+  animation: pop .9s var(--ease) both;
+}
+#landing .brand-logo-img { width: auto; height: 40px; }
+
 .wordmark { display: flex; flex-direction: column; line-height: .92; }
 .wordmark .row1 { display: flex; align-items: baseline; gap: 9px; }
 .wordmark .gbi {
