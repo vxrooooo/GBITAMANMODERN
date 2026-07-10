@@ -43,8 +43,8 @@ const CONFIG = {
 
   // ---- Supabase. Ambil dari Project Settings → API.
   supabase: {
-    url: 'YOUR_SUPABASE_URL',          // contoh: https://xxxx.supabase.co
-    anonKey: 'YOUR_SUPABASE_ANON_KEY',
+    url: 'https://rhcqjeanqrerdbbhfnds.supabase.co',          // contoh: https://xxxx.supabase.co
+    anonKey: 'sb_publishable_KS26LAfmxxZ8p1eOuxYGKw_4R8EqiUw',
   },
 
   // ---- Fonnte (WhatsApp gateway)
