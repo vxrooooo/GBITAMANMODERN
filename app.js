@@ -16,9 +16,7 @@
 // Contoh: lu punya slide.jpg, slide2.jpg, slide3.jpg → isi seperti di bawah.
 // Foto yg tidak ditemukan browser skip otomatis (tampil hitam sebentar).
 const SLIDE_IMAGES = [
-  'slide.jpg',    // ← foto pertama lu
-  'slide2.jpg',   // ← foto kedua
-  'slide3.jpg',   // ← foto ketiga
+  'slide.JPG',    // ← foto pertama lu
   // tambahkan di sini kalau ada foto berikutnya:
   // 'slide4.jpg',
   // 'slide5.jpg',
