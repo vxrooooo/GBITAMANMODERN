@@ -1036,13 +1036,29 @@ function initSlideshow() {
     };
     logoImg.src = 'logo.png';
 
-    // Navbar scroll effect
+    // Navbar scroll effect + mobile menu
     const nav = document.getElementById('lp-nav');
+    const navToggle = document.getElementById('lp-nav-toggle');
+    const navMobile = document.getElementById('lp-nav-mobile');
+    const closeMobileNav = () => {
+      navMobile?.classList.remove('open');
+      navToggle?.setAttribute('aria-expanded', 'false');
+    };
     if (nav) {
       window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 30);
       }, { passive: true });
     }
+    navToggle?.addEventListener('click', () => {
+      const open = navMobile?.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navMobile?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', closeMobileNav);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMobileNav();
+    });
 
     // Social link injection (update hrefs from config)
     document.querySelectorAll('[href*="gbifamilychurchtamanmodern"]').forEach(a => { a.href = SOCIAL_LINKS.instagram; });
